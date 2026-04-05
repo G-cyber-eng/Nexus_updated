@@ -27,6 +27,18 @@ import { SettingsPage } from './pages/settings/SettingsPage';
 import { HelpPage } from './pages/help/HelpPage';
 import { DealsPage } from './pages/deals/DealsPage';
 
+// Calendar Page
+import { CalendarPage } from './pages/calendar/CalendarPage';
+
+// Video Call Page
+import { VideoCallPage } from './pages/videocall/VideoCallPage';
+
+// Document Chamber Page
+import { DocumentChamberPage } from './pages/documentchamber/DocumentChamberPage';
+
+// ✅ NEW - Payments Page (Week 3)
+import { PaymentsPage } from './pages/payments/PaymentsPage';
+
 // Chat Pages
 import { ChatPage } from './pages/chat/ChatPage';
 
@@ -83,6 +95,26 @@ function App() {
           <Route path="/deals" element={<DashboardLayout />}>
             <Route index element={<DealsPage />} />
           </Route>
+
+          {/* Calendar Route */}
+          <Route path="/calendar" element={<DashboardLayout />}>
+            <Route index element={<CalendarPage />} />
+          </Route>
+
+          {/* Video Call Route */}
+          <Route path="/video-call" element={<DashboardLayout />}>
+            <Route index element={<VideoCallPage />} />
+          </Route>
+
+          {/* Document Chamber Route */}
+          <Route path="/document-chamber" element={<DashboardLayout />}>
+            <Route index element={<DocumentChamberPage />} />
+          </Route>
+
+          {/* ✅ NEW - Payments Route */}
+          <Route path="/payments" element={<DashboardLayout />}>
+            <Route index element={<PaymentsPage />} />
+          </Route>
           
           {/* Chat Routes */}
           <Route path="/chat" element={<DashboardLayout />}>
@@ -93,7 +125,7 @@ function App() {
           {/* Redirect root to login */}
           <Route path="/" element={<Navigate to="/login" replace />} />
           
-          {/* Catch all other routes and redirect to login */}
+          {/* Catch all */}
           <Route path="*" element={<Navigate to="/login" replace />} />
         </Routes>
       </Router>

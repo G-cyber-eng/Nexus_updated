@@ -13,10 +13,10 @@ import { entrepreneurs } from '../../data/users';
 import { getRequestsFromInvestor } from '../../data/collaborationRequests';
 
 // Components
-import Calendar from '../../components/ui/Calendar';
-import VideoCall from '../../components/video/VideoCall';
-import DocumentChamber from '../../components/document/DocumentChamber';
-import PaymentChamber from '../../components/payment/PaymentChamber';
+// import Calendar from '../../components/ui/Calendar';
+// import VideoCall from '../../components/video/VideoCall';
+// import DocumentChamber from '../../components/document/DocumentChamber';
+// import PaymentChamber from '../../components/payment/PaymentChamber';
 
 // Define CollaborationRequest type
 type CollaborationRequest = {
@@ -157,8 +157,8 @@ export const InvestorDashboard: React.FC = () => {
       </div>
 
             {/* Calendar + VideoCall - First Row */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        <div className="h-full">
+      {/* <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div className="h-full"> */}
           {/* <Calendar
             meetings={sentRequests
               .filter((req) => req.status === 'accepted')
@@ -167,23 +167,23 @@ export const InvestorDashboard: React.FC = () => {
                 startupName: req.startupName,
               }))}
           /> */}
-          <Calendar role="investor" />
+          {/* <Calendar role="investor" />
         </div>
 
         <div className="h-full">
           <VideoCall />
         </div>
-      </div>
+      </div> */}
 
       {/* DocumentChamber + PaymentChamber - Second Row */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        <div className="h-full">
-          <DocumentChamber />
-        </div>
-        <div className="h-full">
-          <PaymentChamber />
-        </div>
-      </div>
+      {/* // <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+      //   <div className="h-full">
+      //     <DocumentChamber />
+      //   </div>
+      //   <div className="h-full">
+      //     <PaymentChamber />
+      //   </div>
+      // </div> */}
 
       {/* Entrepreneurs Grid */}
       <div>

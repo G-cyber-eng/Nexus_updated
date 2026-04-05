@@ -12,10 +12,10 @@ import { CollaborationRequest } from '../../types';
 import { getRequestsForEntrepreneur } from '../../data/collaborationRequests';
 import { investors } from '../../data/users';
 
-import Calendar from '../../components/ui/Calendar';
-import VideoCall from '../../components/video/VideoCall';
-import DocumentChamber from '../../components/document/DocumentChamber';
-import PaymentChamber from '../../components/payment/PaymentChamber';
+// import Calendar from '../../components/ui/Calendar';
+// import VideoCall from '../../components/video/VideoCall';
+// import DocumentChamber from '../../components/document/DocumentChamber';
+// import PaymentChamber from '../../components/payment/PaymentChamber';
 
 export const EntrepreneurDashboard: React.FC = () => {
   const { user } = useAuth();
@@ -114,7 +114,7 @@ export const EntrepreneurDashboard: React.FC = () => {
       </div>
 
       {/* Calendar + VideoCall - First Row */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+      {/* <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div className="h-full">
           <Calendar 
             meetings={collaborationRequests
@@ -129,17 +129,17 @@ export const EntrepreneurDashboard: React.FC = () => {
         <div className="h-full">
           <VideoCall />
         </div>
-      </div>
+      </div> */}
 
-      {/* DocumentChamber + PaymentChamber - Second Row */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+      
+      {/* <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div className="h-full">
           <DocumentChamber />
         </div>
         <div className="h-full">
           <PaymentChamber />
         </div>
-      </div>
+      </div> */}
 
       {/* Collaboration Requests and Recommended Investors */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
